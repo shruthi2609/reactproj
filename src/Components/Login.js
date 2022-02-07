@@ -1,16 +1,20 @@
 import {useState} from "react"
+import { useNavigate } from "react-router-dom"
 const Login=()=>{
     const [userName,setuserName]=useState("")
     const [password,setpassword]=useState("")
     const [msg,setMsg]=useState("login")
+    const history=useNavigate()
     const authenticateUser=(un,pw,e)=>{
         e.preventDefault()
-        if(un==="jsl@gmail.com"&&pw==="test123"){
+        if(pw==="test123"){
             setMsg("login successfull")
         }
         else{
             setMsg("invalid credentials")
         }
+        history(`/profile/${userName}?india`)
+
     }
     return(
         <div>
@@ -19,7 +23,7 @@ const Login=()=>{
             <form>
         <input 
         type="text"
-        placeholder="enter email"
+        placeholder="enter username"
         onChange={(event)=>setuserName(event.target.value)}
 
         ></input>
