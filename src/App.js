@@ -7,15 +7,17 @@ import Profile from "./Components/Profile";
 
 import HooksParent from "./Components/HooksParent";
 import ContactBooks from "./Components/ContactBook";
+import TodoAPI from "./Components/TodoAPI";
 function App() {
   return (
    <div>
-    <Router>
+     { /*  <Router>
     <nav>
-   { /*  <Link to="/taskman">Task Manager</Link>
-      <Link to="/counter">Counter</Link>*/}
+  <Link to="/taskman">Task Manager</Link>
+      <Link to="/counter">Counter</Link>
       <Link to="/login">Login</Link>
      <Link to="/hlc">hlc</Link>
+     <Link
 
     </nav>
     <Routes>
@@ -24,10 +26,11 @@ function App() {
     <Route path="/login" element={<Login></Login>}></Route>
     <Route path="/profile/:userName/:location" element={<Profile></Profile>}></Route>
      <Route path="/taskman" element={<TaskManager></TaskManager>}></Route>
-    {/*   <Route path="/counter" element={<CounterHooks count={0}></CounterHooks>}></Route>*/}
+    {/*   <Route path="/counter" element={<CounterHooks count={0}></CounterHooks>}></Route>
     </Routes>
    
-  </Router>
+  </Router>*/}
+  <TodoAPI></TodoAPI>
   </div>
  
   );

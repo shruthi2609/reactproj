@@ -1,4 +1,5 @@
 import { useState,useMemo } from "react"
+import {TextField,Button} from "@mui/material"
 
 const ContactDisplay=(props)=>{
     const [text,setText]=useState("")
@@ -9,8 +10,12 @@ const ContactDisplay=(props)=>{
     //getConatcts=useMemo()
     return(
         <div>
-            <input type="text" onChange={(e)=>setText(e.target.value)}></input>
-            <button onClick={(e)=>setSearchText(text)} >search</button>
+           <TextField id="outlined-basic" label="name" variant="outlined" 
+           onChange={(e)=>setText(e.target.value)}/>
+       
+            <Button variant="contained"  onClick={(e)=>setSearchText(text)}>search</Button>
+
+            
             {
                 getContacts.map(
 (item)=>(
