@@ -8,6 +8,7 @@ import Profile from "./Components/Profile";
 import HooksParent from "./Components/HooksParent";
 import ContactBooks from "./Components/ContactBook";
 import TodoAPI from "./Components/TodoAPI";
+import CounterContainer from "./container/CounterContainer";
 function App() {
   return (
    <div>
@@ -30,7 +31,7 @@ function App() {
     </Routes>
    
   </Router>*/}
-  <TodoAPI></TodoAPI>
+<CounterContainer></CounterContainer>
   </div>
  
   );
